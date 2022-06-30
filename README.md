@@ -4,25 +4,36 @@ All you need to know about important algorithms.
 
 ## Sorting
 
+### Concepts
+
+- **Sort Stability** : A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input array to be sorted.  
+Example: *Bubble sort, Insertion sort, Merge sort*.
+<img width="876" alt="Stable vs Unstable sort" src="https://user-images.githubusercontent.com/15028913/176631963-b92bdc18-f7d0-4cee-9688-e7b3aabfe790.png">
+
+- **In place Sort** : An in-place sorting algorithm uses constant space for producing the output (modifies the given array only). It sorts the list only by modifying the order of the elements within the list.  
+For example, *Selection, Bubble, Insertion Sort* are in-place sorting algorithms as they do not use any additional space for sorting the list and a typical implementation of *Merge Sort is not in-place*.
+
+----
+
 ### Selection Sort
 
 Given an array of elements that needs to be sorted in ascending order using Selection Sort,find the smallest number in the array and put in the first place, then find the second smallest number and put in the second place, and so on.
 
 **Pass 1**  
 Search smallest element from arr[0] to arr[n-1]  
-No. of comparisons = (n-1)  
+*No. of comparisons = (n-1)*  
 Exchange this element with arr[0]  
 arr[0] is sorted
 
 **Pass 2**  
 Search the smallest element from arr[1] to arr[n-1]    
-No. of comparisons = (n-2)  
+*No. of comparisons = (n-2)*  
 Exchange this element with arr[1]  
 arr[0] and arr[1] are sorted
 
 **Pass n-1**  
 Search smallest element from Index (n-2) to (n-1)  
-No.of comparisons = 1  
+*No.of comparisons = 1*  
 Exchange with element at Index (n-2)  
 arr[0], arr[1],...............arr[n-2] are sorted
 
@@ -37,7 +48,8 @@ No. of comparisons performed are same, whether the input data is sorted, reverse
 
 **Space Complexity** : **O(1)**
 
-**Not a stable sort**
+**Not a stable sort**  
+To know why, [click here](https://www.geeksforgeeks.org/stable-selection-sort/#:~:text=Selection%20sort%20works%20by%20finding,is%20what%20makes%20it%20unstable)
 
 ----
 
@@ -62,7 +74,7 @@ All elements from Index (n-1) to Index 1 would be sorted and then the only eleme
 **Total Comparisons = n(n-1)/2** ; (n-1) + (n-2) + (n-3) + .............+ 3 + 2 + 1
 
 **Time Complexity**  
-- **Sorted Array** : **O(n)** ; 1 Pass, (n-1) Comparisons, 0 Swaps 
+- **Sorted Array** : **O(n)** ; 1 Pass, (n-1) Comparisons, 0 Swaps  
 Only one pass is required, hence only one iteration of the outer for loop. Total comparisons would be (n-1) and since array is sorted, swaps would be 0.
 - **Reverse Sorted Array** : **O(n²)** ; (n-1) Passes, n(n-1)/2 Comparisons, Swaps = Comparisons
 - **Data in Random Order** : **O(n²)** ; (n-1) Passes, n(n-1)/2 Comparisons
@@ -70,3 +82,8 @@ Only one pass is required, hence only one iteration of the outer for loop. Total
 **Space Complexity** : **O(1)**
 
 **Stable sort**
+
+----
+
+### Insertion Sort
+
