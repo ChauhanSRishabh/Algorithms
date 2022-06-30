@@ -22,23 +22,30 @@ int main()
 
     // BUBBLE SORT
     // Sorted in Ascending Order
-
+    int exchanges;
     for (int i = 1; i < len; i++) // Total passes are 1 less than the size of array
     {
+        exchanges = 0;
         for (int j = 0; j < len - i; j++) // for each pass i, checks done are (len-i)
         {
             if (arr[j] > arr[j + 1])
+            {
                 swap(arr + j, arr + j + 1); // OR swap(&arr[j], &arr[j+1]) ; one and the same thing. Swap function would not have worked if we'd have written swap(arr[j], arr[j+1])
-
+                exchanges++;
+            }
+            
             /*Without Swap Function
             if(arr[j]>arr[j+1])
             {
                 int temp = arr[j];
                 arr[j] = arr[j+1];
                 arr[j+1] = temp;
+                exhanges++;
             }
             */
         }
+        if (exchanges == 0)
+            break;
     }
 
     printf("\nArray after Bubble Sort : ");
