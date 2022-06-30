@@ -46,10 +46,9 @@ All elements except the last one have been put in their proper place. The last e
 Sorted, Reverse sorted, Random Order Array : **O(n²)**  
 No. of comparisons performed are same, whether the input data is sorted, reverse sorted, or in random order.
 
-**Space Complexity** : **O(1)**
-
-**Not a stable sort**  
-To know why, [click here](https://www.geeksforgeeks.org/stable-selection-sort/#:~:text=Selection%20sort%20works%20by%20finding,is%20what%20makes%20it%20unstable)
+**Space Complexity** : **O(1)**  
+**In-place sort**  
+**Not a stable sort**. To know why, [click here](https://www.geeksforgeeks.org/stable-selection-sort/#:~:text=Selection%20sort%20works%20by%20finding,is%20what%20makes%20it%20unstable)
 
 ----
 
@@ -77,13 +76,47 @@ All elements from Index (n-1) to Index 1 would be sorted and then the only eleme
 - **Sorted Array** : **O(n)** ; 1 Pass, (n-1) Comparisons, 0 Swaps  
 Only one pass is required, hence only one iteration of the outer for loop. Total comparisons would be (n-1) and since array is sorted, swaps would be 0.
 - **Reverse Sorted Array** : **O(n²)** ; (n-1) Passes, n(n-1)/2 Comparisons, Swaps = Comparisons
-- **Data in Random Order** : **O(n²)** ; (n-1) Passes, n(n-1)/2 Comparisons
+- **Data in Random Order** : **O(n²)**
 
-**Space Complexity** : **O(1)**
-
+**Space Complexity** : **O(1)**  
+**In-place sort**  
 **Stable sort**
 
 ----
 
 ### Insertion Sort
+
+Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands.  
+The array is virtually split into a sorted and an unsorted part. Sorted part contains only the first element of the list and the unsorted part contains the rest of the elements.  
+In each pass, values from the unsorted part are picked and placed at the correct position in the sorted part.
+
+**Pass 1**  
+Sorted part : arr[0]  
+Unsorted part : arr[1] to arr[n-1]  
+arr[1] is inserted before or after arr[0]  
+Result : arr[0] and arr[1] are sorted
+
+**Pass 2**  
+Sorted part : arr[0], arr[1]  
+Unsorted part : arr[2] to arr[n-1]  
+arr[2] is inserted before arr[0], or in between arr[0] and arr[1] or after arr[1]  
+Result : arr[0], arr[1] and arr[2] are sorted
+
+**Pass n-1**  
+Sorted part : arr[0] to arr[n-2]  
+Unsorted part : arr[n-1]  
+arr[n-1] is inserted at it's proper place among arr[0], arr[1],............arr[n-2]  
+Result : arr[0], arr[1],........arr[n-1] are sorted
+
+**Time Complexity**  
+- **Sorted Array** : **O(n)** ; 1 Pass, (n-1) Comparisons, 0 Swaps  
+For each iteration of the outer for loop, arr[i] is always in placeand if it is in place, only 1 comparison occurs for that iteration. Outer loop iterates n-1 times, hence Total comparisons would be (n-1)
+- **Reverse Sorted Array** : **O(n²)** ; Worst case; (n-1) Passes, n(n-1)/2 Comparisons
+- **Data in Random Order** : **O(n²)**
+
+**Space Complexity** : **O(1)**  
+**In-place sort**  
+**Stable sort**
+
+----
 
