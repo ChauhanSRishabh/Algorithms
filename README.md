@@ -114,9 +114,13 @@ For each iteration of the outer for loop, arr[i] is always in placeand if it is 
 - **Reverse Sorted Array** : **O(n²)** ; Worst case; (n-1) Passes, n(n-1)/2 Comparisons
 - **Data in Random Order** : **O(n²)**
 
+**IMP** : If n is small, Insertion sort is preferred over Merge sort as the difference between n² and nlogn is very less, for small values of n.
+
 **Space Complexity** : **O(1)**  
 **In-place sort**  
 **Stable sort**
 
 ----
+
+### Merge Sort
 
