@@ -124,3 +124,20 @@ For each iteration of the outer for loop, arr[i] is always in placeand if it is 
 
 ### Merge Sort
 
+The Merge Sort algorithm is a sorting algorithm that is considered as an example of the *divide and conquer* strategy.  
+In this algorithm, the array is initially divided into two equal halves and then they are combined in a sorted manner. We can think of it as a *recursive algorithm that continuously splits the array in half until it cannot be further divided*. This means that if the array becomes empty or has only one element left, the dividing will stop, i.e. it is the base case to stop the recursion.  
+If the array has multiple elements, we split the array into halves and recursively invoke the merge sort on each of the halves. Finally, when both the halves are sorted, the merge operation is applied.  
+**Merge operation** is the process of taking two smaller sorted arrays and combining them to eventually make a larger one.
+
+**This is how merge sort proceeds**  
+![Merge-Sort-Tutorial](https://user-images.githubusercontent.com/15028913/177096045-a1968eb8-224f-41fb-8548-b11ef2d20dc9.png)
+
+**Time Complexity**  : **O(nlogn)**  
+It is the same for all 3 cases (worst, average and best) as merge sort always divides the array into two halves and takes linear time to merge two halves.
+
+**Space Complexity** : **O(n)**  
+**Not an in-place sort**  
+**Stable sort**
+
+----
+
