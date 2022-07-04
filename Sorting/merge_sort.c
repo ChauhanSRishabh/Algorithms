@@ -5,6 +5,7 @@
 // Function to merge 2 subarrays of arr[].
 // First subarray is arr[beg.....mig]
 // Second subarray is arr[mid+1.......end]
+// When merging, it ensures the elements are being merged in the desired order, ascending/descending
 void merge(int arr[], int beg, int mid, int end)
 {
     int n1 = mid - beg + 1;
@@ -57,6 +58,22 @@ void merge(int arr[], int beg, int mid, int end)
         arr[k] = RightArray[j];
         j++;
         k++;
+    }
+}
+
+// beg is the starting index and end is last index of the sub-array of arr that is to be sorted
+void mergesort(int arr[], int beg, int end)
+{
+    if (beg < end)
+    {
+        int mid = (beg + end) / 2;
+
+        // Sort the 2 halves
+        mergesort(arr, beg, mid);
+        mergesort(arr, mid + 1, end);
+
+        // Merge the 2 sorted halves
+        merge(arr, beg, mid, end);
     }
 }
 
