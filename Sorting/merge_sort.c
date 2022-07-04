@@ -77,3 +77,31 @@ void mergesort(int arr[], int beg, int end)
     }
 }
 
+// Function to print the array
+void printArray(int arr[], int n)
+{
+    for (int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+    printf("\n");
+}
+
+int main()
+{
+    int n;
+    printf("Enter the size of array : ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("\nEnter the array elements : ");
+    for (int i = 0; i < n; i++)
+        scanf("%d", &arr[i]);
+
+    printf("\nGiven array is : ");
+    printArray(arr, n);
+
+    mergesort(arr, 0, n - 1);
+
+    printf("\nSorted array is : ");
+    printArray(arr, n);
+
+    return 0;
+}
