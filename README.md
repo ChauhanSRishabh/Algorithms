@@ -154,6 +154,6 @@ There are different versions of quickSort that pick pivot in different ways:
 The key process in Quick Sort is partition().  
 Target of partitions is, given an array and an element x of array as pivot, put x at its correct position in sorted array and put all smaller elements (smaller than x) before x, and put all greater elements (greater than x) after x. All this should be done in linear time.
 
-**Partition Algorithm** : There can be many ways to do partition. It takes last element as pivot, places the pivot element at its correct position in sorted array by placing all smaller elements(smaller than pivot) to left of pivot and all greater elements to right of pivot.
+**Partition Algorithm** : There can be many ways to do partition. It takes last element as pivot, places the pivot element at its correct position in sorted array and places all smaller elements(smaller than pivot) to the left of pivot(before pivot, if array is to be sorted in ascending order) and all greater elements to right of pivot. All this should be done in linear time.
 
 ![QuickSort](https://user-images.githubusercontent.com/15028913/177361504-75eabbc8-016c-48fb-8c58-272715784383.png)
