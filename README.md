@@ -157,3 +157,20 @@ Target of partitions is, given an array and an element x of array as pivot, put 
 **Partition Algorithm** : There can be many ways to do partition. It takes last element as pivot, places the pivot element at its correct position in sorted array and places all smaller elements(smaller than pivot) to the left of pivot(before pivot, if array is to be sorted in ascending order) and all greater elements to right of pivot. All this should be done in linear time.
 
 ![QuickSort](https://user-images.githubusercontent.com/15028913/177361504-75eabbc8-016c-48fb-8c58-272715784383.png)
+
+**Time Complexity**
+- **Worst Case** : **O(n²)**  
+The worst case occurs when the partition process always picks greatest or smallest element as pivot. If we consider our implemented partition strategy where last element is picked as pivot, the worst case would occur when the array is already sorted in increasing or decreasing order. Following is recurrence for worst case.  
+- **Best Case** : **O(nlogn)**  
+The best case occurs when the partition process always picks the middle element as pivot.
+- **Average Case** : **O(nlogn)**
+
+**Space Complexity** : **O(n)**  
+**In-place sort** : Uses extra space only for storing recursive function calls but not for manipulating the input.  
+**Not a stable sort**
+
+**Quick Sort is preferred over Merge Sort for sorting Arrays**  
+Quick Sort in its general form is an in-place sort (i.e. it doesn’t require any extra storage) whereas merge sort requires O(n) extra storage, N denoting the array size which may be quite expensive. Allocating and de-allocating the extra space used for merge sort increases the running time of the algorithm. Comparing average complexity we find that both type of sorts have O(nlogn) average complexity but the constants differ. For arrays, merge sort loses due to the use of extra O(n) storage space.
+
+----
+
