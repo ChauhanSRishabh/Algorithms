@@ -1,5 +1,4 @@
 #include <stdio.h>
-#define MAX 50
 
 int binarysearch(int arr[], int n, int item)
 {
