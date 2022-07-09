@@ -174,3 +174,17 @@ Quick Sort in its general form is an in-place sort (i.e. it doesn’t require an
 
 ----
 
+## Searching
+
+### Linear Search
+
+Sequential/Linear search is performed in a linear way, i.e., it starts from the beginning of the list and continues till we find the item or the end is reached.
+
+*This search is good for data structures like linked lists, because no random access to elements(for eg, accessing middle element in binary search) is required.*
+
+**Time Complexity** : **O(n)**
+- **Best Case** : The best case is when the item is present at the first posiiton and in this case only one comparison is done. **O(1)**
+- **Worst Case** : The worst case ocurs when the item is not present in the array and in this case n comparisons are required, **O(n)**, *n being the total no. of array elements*.
+- **Average Case** : **O(n)**
+
+----
