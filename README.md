@@ -188,3 +188,19 @@ Sequential/Linear search is performed in a linear way, i.e., it starts from the 
 - **Average Case** : **O(n)**
 
 ----
+
+### Binary Search
+
+The prerequisite for binary search is that the **array should be sorted**.  
+Firstly, we compare the item to be searched with the middle element of the array. If it is found there, our search finishes successfully otherwise the array is divided into 2 equal halves, first half contains all elements to the left of the middle element(ones that are smaller than the middle element) and the other half contains all elements to the right of the middle element(ones that are bigger than the middle element).
+
+If the item to be searched is less than the middle element, it is searched in the left half otherwise it is searched int the right half.  
+Suppose the item to be searched was smaller than the middle element, now search proceeds in the smaller portion(left of the middle element) of the array(subarray) as mentioned above.
+
+*Binary search is preferred only where the data is static, i.e., very few insertion and deletions are done. This is because whenever an insertion/deletion is done, many elements have to be moved to keep the data in sorted order. It is also not suitable for linked lists as direct/random access to middle element is required*
+
+**Time Complexity** : **O(log n)**
+- **Best Case** : The best case is when the item is present in the middle of the array, and in this case the loop is executed only once. **O(1)**
+- **Worst Case** : The worst case ocurs when the item is not present in the array. In each iteration, the array is divided into half, so if the size of the array is n, there will be *log n* such divisions. Thus there will be *log n* comaprisons in worst case. **O(log n)**
+
+----
